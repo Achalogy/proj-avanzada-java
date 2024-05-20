@@ -217,6 +217,19 @@ public class CentroAdopcion {
       Utils.writeLog(e);
       System.out.println("No se pudo guardar el archivo");
     }
+
+    try {
+      ObjectOutputStream file = new ObjectOutputStream(new FileOutputStream("clientes.bin"));
+
+      file.writeObject(this.clientes);
+      file.close();
+
+      System.out.println("Se han guardado correctamente los datos.");
+    } catch (Exception e) {
+      e.printStackTrace();
+      Utils.writeLog(e);
+      System.out.println("No se pudo guardar el archivo");
+    }
   }
 
   public void loadFromFile() {
@@ -236,6 +249,18 @@ public class CentroAdopcion {
       ObjectInputStream file = new ObjectInputStream(new FileInputStream("guarderia.bin"));
 
       this.guarderia = (ArrayList<Mascota>) file.readObject();
+
+      file.close();
+    } catch (Exception e) {
+      e.printStackTrace();
+      Utils.writeLog(e);
+      System.out.println("No se pudo cargar el archivo");
+    }
+
+    try {
+      ObjectInputStream file = new ObjectInputStream(new FileInputStream("clientes.bin"));
+
+      this.clientes = (ArrayList<Persona>) file.readObject();
 
       file.close();
     } catch (Exception e) {
