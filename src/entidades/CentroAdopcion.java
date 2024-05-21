@@ -135,7 +135,7 @@ public class CentroAdopcion {
 
       m = this.buscarMascota(nombre, cliente.getMascotas());
 
-      if (nombre == "0")
+      if (nombre.equals("0"))
         break;
     }
 
@@ -177,7 +177,6 @@ public class CentroAdopcion {
 
     this.ganancias += 10;
     System.out.println("Ganacias del centro de adopcion: " + this.ganancias);
-    Utils.pause();
   }
 
   public Mascota buscarMascota(String nombre, ArrayList<Mascota> lista) {

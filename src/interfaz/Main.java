@@ -72,7 +72,6 @@ public class Main {
           PAJ.darEnAdopcion(mascotaAdoptar, cliente);
           System.out.println("Felicitaciones, has adoptado a " + mascotaAdoptar.getNombre());
 
-          Utils.pause();
           break;
         }
         case 3: {
@@ -93,8 +92,7 @@ public class Main {
             System.out.print("Y el nombre que le deseas poner: ");
             String nuevoNombre = Utils.scLine();
 
-            cliente.cambiarNombreMascota(null, nuevoNombre);
-            Utils.pause();
+            cliente.cambiarNombreMascota(m, nuevoNombre);
           }
           break;
         }
@@ -138,7 +136,7 @@ public class Main {
           Persona cliente = pedirCedula(PAJ);
           Mascota m = null;
           String nombre = "";
-          cliente.mostrarMascotas();
+          PAJ.mostrarGuarderia();
 
           System.out.println("\n¿Que mascota desea Recojer?");
 
@@ -146,9 +144,9 @@ public class Main {
             System.out.println("Nombre (0 Para salir): ");
             nombre = Utils.scLine();
 
-            m = PAJ.buscarMascota(nombre, cliente.getMascotas());
+            m = PAJ.buscarMascota(nombre, PAJ.getGuarderia());
 
-            if (nombre == "0")
+            if (nombre.equals("0"))
               break;
           }
 
@@ -169,7 +167,7 @@ public class Main {
 
             m = PAJ.buscarMascota(nombre, PAJ.getGuarderia());
 
-            if (nombre == "0")
+            if (nombre.equals("0"))
               break;
           }
           PAJ.interactuar(m);
@@ -220,7 +218,7 @@ public class Main {
 
     Mascota m = null;
 
-    char gatoOPerro = Utils.askForChar("Es un Gato o un perro? (G/p)",
+    char gatoOPerro = Utils.askForChar("Es un Gato o un perro? (G/p) ",
         new char[] { 'G', 'g', 'P', 'p' });
 
     System.out.print("Raza:       ");
