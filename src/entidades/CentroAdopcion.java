@@ -199,7 +199,7 @@ public class CentroAdopcion {
 
       System.out.println("Se han guardado correctamente los datos.");
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo guardar el archivo");
     }
@@ -212,7 +212,7 @@ public class CentroAdopcion {
 
       System.out.println("Se han guardado correctamente los datos.");
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo guardar el archivo");
     }
@@ -225,7 +225,7 @@ public class CentroAdopcion {
 
       System.out.println("Se han guardado correctamente los datos.");
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo guardar el archivo");
     }
@@ -239,7 +239,7 @@ public class CentroAdopcion {
 
       file.close();
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo cargar el archivo");
     }
@@ -251,7 +251,7 @@ public class CentroAdopcion {
 
       file.close();
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo cargar el archivo");
     }
@@ -263,7 +263,7 @@ public class CentroAdopcion {
 
       file.close();
     } catch (Exception e) {
-      e.printStackTrace();
+      
       Utils.writeLog(e);
       System.out.println("No se pudo cargar el archivo");
     }
