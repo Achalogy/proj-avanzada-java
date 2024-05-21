@@ -1,9 +1,10 @@
 package entidades;
 
+import java.io.Serializable;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public abstract class Mascota {
+public abstract class Mascota implements Serializable {
 
   private String raza;
   private Calendar fechaNacimiento;

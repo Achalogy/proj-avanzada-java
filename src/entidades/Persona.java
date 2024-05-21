@@ -1,11 +1,12 @@
 package entidades;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 
 import utils.Utils;
 
-public class Persona {
+public class Persona implements Serializable {
   private String nombre;
   private int edad;
   private String residencia;
