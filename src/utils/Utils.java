@@ -275,7 +275,7 @@ public class Utils {
       System.out.print("|  ( | | )    |");
 
     System.out.println(
-        Utils.padEnd("  Peso: " + m.getPeso() + " - Sexo: " + (m.getSexo() ? "♂️" : "♀️"), size - 23, " ") + "|");
+        Utils.padEnd("  Peso: " + m.getPeso() + "kg - Sexo: " + (m.getSexo() ? "♂️" : "♀️"), size - 23, " ") + "|");
 
     if (m instanceof Perro)
       System.out.print("| (/ /^\\ \\)-' |");
