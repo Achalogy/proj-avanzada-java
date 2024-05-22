@@ -104,9 +104,6 @@ public class Main {
           break;
         case 6:
           PAJ.saveToFile();
-          break;
-
-        default:
           Utils.clearConsole();
           System.out.println("ADIOOOOS!");
           Utils.pause();
@@ -177,6 +174,8 @@ public class Main {
         default:
           return;
       }
+
+      Utils.pause();
     }
   }
 
